@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "MyProgress",
+  name: "ProgressView",
 };
 </script>
 <style lang="scss" scoped>
