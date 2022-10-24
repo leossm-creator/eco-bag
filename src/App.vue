@@ -3,7 +3,7 @@
     <TopToolBar></TopToolBar>
 
     <v-main>
-      <LandingScreen />
+      <router-view></router-view>
     </v-main>
 
     <BottomNav></BottomNav>

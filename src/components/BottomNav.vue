@@ -5,19 +5,19 @@
       color="teal"
       grow
     >
-      <v-btn height="100%" value="wallet">
+      <v-btn height="100%" value="wallet" :to="{ name: 'my-wallet' }">
         <span>Wallet</span>
 
         <v-icon>mdi-wallet-outline</v-icon>
       </v-btn>
 
-      <v-btn height="100%" value="home">
+      <v-btn height="100%" value="home" :to="{ path: '/'}">
         <span>Home</span>
 
         <v-icon>mdi-home-outline</v-icon>
       </v-btn>
 
-      <v-btn height="100%" value="progress">
+      <v-btn height="100%" value="progress" :to="{ path: '/my-progress' }">
         <span>Progress</span>
 
         <v-icon>mdi-progress-clock</v-icon>
