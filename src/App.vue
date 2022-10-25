@@ -1,8 +1,8 @@
 <template>
-  <v-app id="screen">
+  <v-app id="app">
     <TopToolBar></TopToolBar>
 
-    <v-main>
+    <v-main id="main">
       <router-view />
     </v-main>
 
@@ -25,8 +25,18 @@ export default {
 </script>
 
 <style scoped>
-  /* #screen {
-    height: 100%;
-    max-height: 100%;
-  } */
+  #app {
+    /* height: 100%; */
+    /* max-height: calc(100vh - 56px);
+    overflow-y: hidden; */
+  }
+
+  #main {
+    /* height: calc(100vh - 112px);
+    max-height: calc(100vh - 112px);
+    overflow: scroll; */
+    height: calc(100vh - 56px);
+    max-height: calc(100vh - 56px);
+    overflow-y: scroll;
+  }
 </style>

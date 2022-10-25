@@ -1,12 +1,22 @@
 <template>
-  <v-container>
-    <h1 class="headline">Home</h1>
-  </v-container>
+    <div>
+      <ModelViewer />
+    </div>
 </template>
 <script>
+import ModelViewer from "../components/ModelViewer.vue"
+
 export default {
-  name: "HomeView"
+  name: "HomeView",
+  components: {
+    ModelViewer,
+  },
+  data: () => ({
+  }),
 };
 </script>
 <style lang="scss" scoped>
+// #viewer {
+//   height: auto;
+// }
 </style>
