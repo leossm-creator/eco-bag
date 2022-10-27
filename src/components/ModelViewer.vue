@@ -20,7 +20,6 @@ export default {
       obj_loader: null,
       model: null,
       controls: null,
-
     };
   },
   methods: {
@@ -30,7 +29,7 @@ export default {
       this.scene.background = new THREE.Color("#ffffff");
       this.camera = new THREE.PerspectiveCamera(
         15,
-        window.innerWidth / window.innerHeight,
+        this.$refs.viewer.offsetWidth / this.$refs.viewer.offsetHeight,
         1,
         2000
       );
@@ -46,7 +45,7 @@ export default {
 
       this.renderer = new THREE.WebGLRenderer();
 
-      this.renderer.setSize(window.innerWidth, window.innerHeight - 120);
+      this.renderer.setSize(this.$refs.viewer.offsetWidth, this.$refs.viewer.offsetHeight);
 
       this.container = this.$refs.viewer;
 
@@ -102,12 +101,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#viewer {
-  width: 100%;
-  margin: 0;
-  height: 100%;
-
-  canvas {
-  }
+#world {
+  background: #ebe5e7;
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
 }
 </style>

@@ -1,15 +1,15 @@
 <template>
     <div>
-      <ModelViewer />
+      <PetViewer />
     </div>
 </template>
 <script>
-import ModelViewer from "../components/ModelViewer.vue"
+import PetViewer from "../components/PetViewer.vue"
 
 export default {
   name: "HomeView",
   components: {
-    ModelViewer,
+    PetViewer,
   },
   data: () => ({
   }),

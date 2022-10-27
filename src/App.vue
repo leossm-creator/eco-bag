@@ -26,15 +26,14 @@ export default {
 
 <style scoped>
   #app {
-    /* height: 100%; */
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
     /* max-height: calc(100vh - 56px);
     overflow-y: hidden; */
   }
 
   #main {
-    /* height: calc(100vh - 112px);
-    max-height: calc(100vh - 112px);
-    overflow: scroll; */
     height: calc(100vh - 56px);
     max-height: calc(100vh - 56px);
     overflow-y: scroll;
