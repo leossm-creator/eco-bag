@@ -20,11 +20,17 @@
               }}</v-list-item-subtitle>
             </v-list-item-content>
 
-            <v-list-item-avatar
+            <!-- <v-list-item-avatar
               tile
               size="80"
               color="grey"
-            ></v-list-item-avatar>
+            ></v-list-item-avatar> -->
+            <v-img
+            contain
+              height="80"
+              width="80"
+              :src="card.logo"
+            ></v-img>
           </v-list-item>
 
           <v-card-actions>
@@ -37,7 +43,7 @@
     </div>
     <v-dialog v-model="dialog" max-width="290">
       <v-card>
-        <v-toolbar color="primary" dark>{{current.title}}</v-toolbar>
+        <v-toolbar color="primary" dark>{{ current.title }}</v-toolbar>
         <v-card-text>
           <div class="text-h2 pa-12">Hello world!</div>
         </v-card-text>
@@ -60,7 +66,7 @@ import "swiper/css/pagination";
 // import "swiper/css/scrollbar";
 
 export default {
-  name: "WalletView",
+  name: "RewardsView",
   components: {},
 
   data: function () {
@@ -69,7 +75,8 @@ export default {
       dialog: false,
       current: {
         title: "Woolworths",
-        logo: "",
+        logo: "https://cdn0.woolworths.media/content/content/icon-header-logo.png",
+        color: "",
         barcode: "",
         amount: "5.00",
         voucher_code: "PRETTY_HUNGRY",
@@ -80,7 +87,8 @@ export default {
       cards: [
         {
           title: "Woolworths",
-          logo: "",
+          logo: "/logos/woolworths_logo.png",
+          color: "",
           barcode: "",
           amount: "5.00",
           voucher_code: "PRETTY_HUNGRY",
@@ -90,7 +98,8 @@ export default {
         },
         {
           title: "Coles",
-          logo: "",
+          logo: "/logos/coles_logo.png",
+          color: "",
           barcode: "",
           amount: "5.00",
           voucher_code: "PRETTY_TIRED",
@@ -100,7 +109,8 @@ export default {
         },
         {
           title: "Starbucks",
-          logo: "",
+          logo: "/logos/starbucks_logo.png",
+          color: "",
           barcode: "",
           amount: "5.00",
           voucher_code: "PRETTY_SLEEPY",
@@ -109,8 +119,9 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
-          title: "H&M",
-          logo: "",
+          title: "Patagonia",
+          logo: "/logos/patagonia_logo.jpg",
+          color: "",
           barcode: "",
           amount: "5.00",
           voucher_code: "PRETTY_BORED",
@@ -148,7 +159,7 @@ export default {
             let currentIndex = this.activeIndex;
 
             self.current = self.cards[currentIndex];
-            console.log(self.current);
+            // console.log(self.current);
           },
         },
       });

@@ -1,26 +1,27 @@
 <template>
   <div>
     <v-bottom-navigation
+      id="bottomNav"
       class="bottomNav"
       :value="active"
       color="white"
-      background-color="#2CB56A"
       light
       grow
     >
-      <v-btn height="100%" value="wallet" :to="{ name: 'wallet' }">
-        <span>Wallet</span>
+
+      <v-btn height="100%" value="reward" :to="{ name: 'reward' }" class="bottomNavLinks">
+        <span>Rewards</span>
 
         <v-icon>mdi-medal</v-icon>
       </v-btn>
 
-      <v-btn height="100%" value="home" :to="{ path: '/'}">
+      <v-btn height="100%" value="home" :to="{ path: '/' }" class="bottomNavLinks">
         <span>Home</span>
 
         <v-icon>mdi-home-variant</v-icon>
       </v-btn>
 
-      <v-btn height="100%" value="progress" :to="{ name: 'progress' }">
+      <v-btn height="100%" value="progress" :to="{ name: 'progress' }" >
         <span>Progress</span>
 
         <v-icon>mdi-history</v-icon>
@@ -33,14 +34,12 @@
 export default {
   name: "BottomNav",
 
-  components: {
-  },
+  components: {},
 
   data: () => ({
-    active: "home"
+    active: "home",
   }),
-  computed: {
-  },
+  computed: {},
 };
 </script>
 <style lang="scss" scoped>
@@ -50,6 +49,17 @@ export default {
   position: absolute;
   bottom: 0;
   // color: "white";
-  // background: linear-gradient("#53F29B", "#2CB56A") !important;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(83, 242, 155, 0.7987570028011204) 0%,
+    rgba(44, 215, 121, 1) 100%
+  );
 }
+
+.theme--light.v-bottom-navigation .v-btn:not(.v-btn--active) {
+    color: rgba(73, 73, 73, 0.6) !important;
+}
+
 </style>

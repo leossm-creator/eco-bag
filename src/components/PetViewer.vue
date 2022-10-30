@@ -4,7 +4,7 @@
 
 <script>
 import * as THREE from "three";
-import { Lion, Fan } from "../utility/petviz";
+import { Lion } from "../utility/petviz";
 
 export default {
   name: "PetViewer",
@@ -57,6 +57,7 @@ export default {
       this.camera.position.y = 0;
       this.camera.lookAt(new THREE.Vector3(0, 0, 0));
       this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      this.renderer.setClearColor( 0x000000, 0 );
       this.renderer.setPixelRatio(window.devicePixelRatio);
       this.renderer.setSize(this.WIDTH, this.HEIGHT);
       this.renderer.shadowMapEnabled = true;
@@ -148,14 +149,14 @@ export default {
     },
 
     createFloor() {
-      this.floor = new THREE.Mesh(
-        new THREE.PlaneGeometry(1000, 500),
-        new THREE.MeshBasicMaterial({ color: 0xebe5e7 })
-      );
-      this.floor.rotation.x = -Math.PI / 2;
-      this.floor.position.y = -100;
-      this.floor.receiveShadow = true;
-      this.scene.add(this.floor);
+      // this.floor = new THREE.Mesh(
+      //   new THREE.PlaneGeometry(1000, 500),
+      //   new THREE.MeshBasicMaterial({ color: "rgba(255,255,255,0)" })
+      // );
+      // this.floor.rotation.x = -Math.PI / 2;
+      // this.floor.position.y = -100;
+      // this.floor.receiveShadow = true;
+      // this.scene.add(this.floor);
     },
 
     createLion() {
@@ -164,9 +165,9 @@ export default {
     },
 
     createFan() {
-      this.fan = new Fan();
-      this.fan.threegroup.position.z = 350;
-      this.scene.add(this.fan.threegroup);
+      // this.fan = new Fan();
+      // this.fan.threegroup.position.z = 350;
+      // this.scene.add(this.fan.threegroup);
     },
 
     loop() {
@@ -174,8 +175,8 @@ export default {
       var xTarget = this.mousePos.x - this.windowHalfX;
       var yTarget = this.mousePos.y - this.windowHalfY;
 
-      this.fan.isBlowing = this.isBlowing;
-      this.fan.update(xTarget, yTarget);
+      // this.fan.isBlowing = this.isBlowing;
+      // this.fan.update(xTarget, yTarget);
       if (this.isBlowing) {
         this.lion.cool(xTarget, yTarget);
       } else {
@@ -206,7 +207,7 @@ export default {
     this.createLights();
     this.createFloor();
     this.createLion();
-    this.createFan();
+    // this.createFan();
     this.loop();
   },
 };
@@ -214,10 +215,11 @@ export default {
 
 <style lang="scss" scoped>
 #viewer {
-  background: #ebe5e7;
+  background: rgba(255, 255,255, 0);
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 20;
 }
 </style>

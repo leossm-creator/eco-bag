@@ -3259,7 +3259,7 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
-"fsevents@~2.3.2":
+"fsevents@^2.3.2", "fsevents@~2.3.2":
   "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
   "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
   "version" "2.3.2"
@@ -4862,6 +4862,13 @@
   "resolved" "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz"
   "version" "2.0.3"
 
+"progressbar.js@^1.1.0":
+  "integrity" "sha512-K68/xcyXKo2I6T3PfIkXrRaycxROmWeU4bugb49iulWR25cU94PM0cfZ47S0jDhG5K3vPhZwCOy1fgb5Pgh6UQ=="
+  "resolved" "https://registry.npmjs.org/progressbar.js/-/progressbar.js-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "shifty" "^2.1.2"
+
 "proxy-addr@~2.0.7":
   "integrity" "sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg=="
   "resolved" "https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz"
@@ -5333,6 +5340,13 @@
     "glob" "^7.0.0"
     "interpret" "^1.0.0"
     "rechoir" "^0.6.2"
+
+"shifty@^2.1.2":
+  "integrity" "sha512-7h420vwC2B0IW+v7UlofcEyXwVjslssNHJwPO8nHfI1UC7MSTEdssG21GcoQpULC6+ySo1akQGk5hxVmy16z5A=="
+  "resolved" "https://registry.npmjs.org/shifty/-/shifty-2.19.1.tgz"
+  "version" "2.19.1"
+  optionalDependencies:
+    "fsevents" "^2.3.2"
 
 "side-channel@^1.0.4":
   "integrity" "sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw=="

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="teal" dark>
+    <v-app-bar app color="white" elevation="0">
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -14,7 +14,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text @click="open = true">
+      <v-btn text @click="open = true" color="#058240">
         <!-- <span class="mr-2">Settings</span> -->
         <v-icon>mdi-cog</v-icon>
       </v-btn>
