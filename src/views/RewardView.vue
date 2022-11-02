@@ -109,9 +109,9 @@
             <v-chip value="10">$ 10</v-chip>
           </v-chip-group>
 
-          <v-card class="mx-auto" max-width="400" elevation="0">
+          <v-card class="mx-auto mt-3" max-width="400" elevation="0">
             <p>
-              Purchase <span class="numV text-caption">${{ row }}</span> voucher for
+              Purchase <span class="numV text-subtitle-1">${{ row }}</span> voucher for
               Woolworths using <span class="numP font-weight-medium text-body-1">{{ getP }}</span> points.
             </p>
           </v-card>
@@ -186,7 +186,7 @@ export default {
           title: "Starbucks",
           logo: "/logos/starbucks_logo.png",
           color: "#006341",
-          amount: "0.00",
+          amount: "2.00",
           voucher_code: "PRETTY_SLEEPY",
           expiry_date: "31/12/23",
           description:

@@ -56,4 +56,11 @@ body {
   max-height: calc(var(--doc-height) - 164px);
   overflow-y: scroll;
 }
+
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 </style>

@@ -1,8 +1,8 @@
 <template>
   <v-container class="py-6">
-    <v-row class="px-3">
+    <!-- <v-row class="px-3">
       <p class="text-h6">Progress</p>
-    </v-row>
+    </v-row> -->
     <v-row class="d-flex justify-center my-3">
       <RingViewer class="progressRing" />
     </v-row>
@@ -12,23 +12,21 @@
           <div class="dataElem">
             You have reached
             <span class="dataNum font-weight-medium">{{ useTime.weekly }}</span>
-            times in this week
+            use times in this week
           </div>
         </v-col>
         <v-divider vertical></v-divider>
         <v-col>
           <div class="dataElem">
-            You have reached
-            <span class="dataNum font-weight-medium">{{
-              useTime.monthly
-            }}</span>
-            times in this week
+            You take avarage of
+            <span class="dataNum font-weight-medium">21</span>
+            days to fill a ring
           </div>
         </v-col>
         <v-divider vertical></v-divider>
         <v-col>
           <div class="dataElem">
-            You have reached
+            You have filled
             <span class="dataNum font-weight-medium">{{ ring.weekly }}</span>
             rings in this week
           </div>
@@ -47,10 +45,10 @@
         class="info_cards"
       >
         <div class="infoElem">
-          You have saved
-          <span class="dataNum font-weight-medium">5</span>
+          You are saving more than
+          <span class="dataNum font-weight-medium">2</span>
           kilograms of plastic bag
-          <v-icon color="green">mdi-bin</v-icon>
+          <span><v-icon color="">mdi-bin</v-icon></span>
         </div>
       </v-sheet>
       <v-sheet
@@ -63,7 +61,7 @@
       >
         <div class="infoElem">
           You have saved
-          <span class="dataNum font-weight-medium">60</span>
+          <span class="dataNum font-weight-medium">6</span>
           liters of petroleum
           <v-icon color="green">mdi-bin</v-icon>
         </div>
@@ -92,9 +90,9 @@
         style="margin-left: 15px"
       >
         <div class="infoElem">
-          You have saved
-          <span class="dataNum font-weight-medium">5</span>
-          kilograms of plastic bag
+          You have reduced
+          <span class="dataNum font-weight-medium">8 kg</span>
+          of Co2 in total
           <v-icon color="green">mdi-bin</v-icon>
         </div>
       </v-sheet>
@@ -124,6 +122,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
+.dataElem {
+  font-size: 0.8em;
+}
 .dataNum {
   color: #1b5e20;
   font-size: large;
