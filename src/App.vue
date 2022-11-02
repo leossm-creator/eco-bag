@@ -19,23 +19,41 @@ export default {
     TopToolBar,
     BottomNav,
   },
-  data: () => ({
-  }),
+  data: () => ({}),
+  methods: {
+    setHeight() {
+      let doc = document.documentElement;
+      doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
+      window.addEventListener("resize", this.setHeight());
+    },
+  },
+  created() {},
 };
 </script>
 
-<style scoped>
-  #app {
-    height: 100vh;
-    width: 100vw;
-    overflow-y: hidden;
-    /* max-height: calc(100vh - 56px);
-    overflow-y: hidden; */
-  }
+<style>
+:root {
+  --doc-height: 100%;
+}
+html,
+body {
+ padding: 0;
+ margin: 0;
+ height: 100vh; /* fallback for Js load */
+ height: var(--doc-height);
+}
 
-  #main {
-    height: calc(100vh - 56px);
-    max-height: calc(100vh - 56px);
-    overflow-y: scroll;
-  }
+#app {
+  height: var(--doc-height);
+  width: 100vw;
+  overflow-y: hidden;
+  /* max-height: calc(100vh - 56px);
+    overflow-y: hidden; */
+}
+
+#main {
+  height: calc(var(--doc-height) - 164px);
+  max-height: calc(var(--doc-height) - 164px);
+  overflow-y: scroll;
+}
 </style>

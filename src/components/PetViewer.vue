@@ -57,7 +57,7 @@ export default {
       this.camera.position.y = 0;
       this.camera.lookAt(new THREE.Vector3(0, 0, 0));
       this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-      this.renderer.setClearColor( 0x000000, 0 );
+      this.renderer.setClearColor(0x000000, 0);
       this.renderer.setPixelRatio(window.devicePixelRatio);
       this.renderer.setSize(this.WIDTH, this.HEIGHT);
       this.renderer.shadowMapEnabled = true;
@@ -178,6 +178,7 @@ export default {
       // this.fan.isBlowing = this.isBlowing;
       // this.fan.update(xTarget, yTarget);
       if (this.isBlowing) {
+        // console.log(xTarget, yTarget);
         this.lion.cool(xTarget, yTarget);
       } else {
         this.lion.look(xTarget, yTarget);
@@ -201,6 +202,12 @@ export default {
       var tv = tmin + pc * dt;
       return tv;
     },
+    animate() {
+      this.render();
+      this.isBlowing = true;
+      this.lion.cool(130, -70);
+      requestAnimationFrame(this.animate);
+    },
   },
   mounted() {
     this.init();
@@ -215,11 +222,11 @@ export default {
 
 <style lang="scss" scoped>
 #viewer {
-  background: rgba(255, 255,255, 0);
+  background: rgba(255, 255, 255, 0);
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 20;
+  z-index: 900;
 }
 </style>

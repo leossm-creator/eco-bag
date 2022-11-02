@@ -3784,6 +3784,11 @@
     "@sideway/formula" "^3.0.0"
     "@sideway/pinpoint" "^2.0.0"
 
+"js-circle-progress@^0.2.4":
+  "integrity" "sha512-WKlRBk8E5wYNVyjTduGdsTFrCB4SrKPP44cTD8d2hwv/6RJZnDIdbfd64L2TLg+dRWDRzO8p0Hs5dPp0M3d09w=="
+  "resolved" "https://registry.npmjs.org/js-circle-progress/-/js-circle-progress-0.2.4.tgz"
+  "version" "0.2.4"
+
 "js-message@1.0.7":
   "integrity" "sha512-efJLHhLjIyKRewNS9EGZ4UpI8NguuL6fKkhRxVuMmrGV2xN/0APGdQYwLFky5w9naebSZ0OwAGp0G6/2Cg90rA=="
   "resolved" "https://registry.npmjs.org/js-message/-/js-message-1.0.7.tgz"

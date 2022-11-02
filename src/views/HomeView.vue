@@ -3,7 +3,7 @@
     <PetViewer />
     <div class="home_overlap">
       <div class="ringContainer">
-        <RingViewer class="ring"></RingViewer>
+        <RingViewer class="ringring"></RingViewer>
         <v-card class="streaks floatingCards blur" width="125" height="125" hover>
           <p class="text-h8 text--disabled font-weight-light">Streaks</p>
           <p class="text-h3 text--primary font-weight-light text-right numData">{{streaks}}</p>
@@ -13,6 +13,9 @@
           <p class="text-h3 text--primary font-weight-light text-right numData">{{points}}</p>
         </v-card>
       </div>
+    </div>
+    <div class="ringCover">
+
     </div>
   </div>
 </template>
@@ -29,14 +32,11 @@ export default {
   data: () => ({
     progress: 75,
     streaks: 55,
-    points: 13,
+    points: 12,
   }),
 };
 </script>
 <style lang="scss" scoped>
-// #viewer {
-//   height: auto;
-// }
 .home_overlap {
   width: 100%;
   height: 100%;
@@ -51,10 +51,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
-.ring {
-}
-
 .floatingCards {
   padding: 15px;
   position: absolute;
@@ -80,6 +76,40 @@ export default {
 
 .blur {
   backdrop-filter: blur(6px);
+}
+
+.circle-progress {
+  width: 250px !important;
+  height: 250px !important;
+}
+
+.circle-progress-value {
+  // fill: url(#gradientGreen);
+  stroke: #058240;
+}
+
+.circle-progress-text-value {
+
+}
+.circle-progress-text-separator {
+  font-size: 1em !important;
+  fill: #bdbdbd !important;
+  text-align: right !important;
+}
+.circle-progress-text-max {
+  font-size: 1em !important;
+  fill: #bdbdbd !important;
+  text-align: right !important;
+}
+
+.ringCover {
+  width: 155px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  top: 200px;
+  z-index: 300;
+  left: 110px;
 }
 
 
